@@ -1,0 +1,49 @@
+[versions]
+agp = "8.5.0"
+kotlin = "1.9.0"
+devtoolsKspVersion = "1.9.10-1.0.13"
+jetbrainsKotlinJvmVersion = "1.9.23"
+
+composeBomVersion = "2024.08.00"
+daggerHiltVersion = "2.51.1"
+apollo = "4.0.0"
+
+hiltComposeVersion = "1.2.0"
+hiltVersion = "2.51.1"
+
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+
+[libraries]
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBomVersion" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+activity-compose = { module = "androidx.activity:activity-compose" }
+navigation-compose = { module = "androidx.navigation:navigation-compose" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose" }
+material3 = { module = "androidx.compose.material3:material3" }
+ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
+ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltComposeVersion" }
+
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion" }
+
+apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apollo"}
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+apollo = { id = "com.apollographql.apollo", version.ref = "apollo" }
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "daggerHiltVersion" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtoolsKspVersion" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvmVersion" }
